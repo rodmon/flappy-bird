@@ -8,7 +8,7 @@ var mainState = {
     // That's where we load the images and sounds
     preload: function () {
         // Load the bird sprite
-        game.load.image('bird', 'assets/bird.png');
+        game.load.image('bird', 'assets/bird2.png');
         game.load.image('pipe', 'assets/pipe.png');
         game.load.audio('jump', 'assets/jump.wav'); 
     },
@@ -22,8 +22,6 @@ var mainState = {
         // Set the physics system
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        
-        
         // Create the groupe of pipes
         this.pipes = game.add.group();
         
@@ -40,6 +38,9 @@ var mainState = {
         
         // Display the bird at the position x=100 and y=245
         this.bird = game.add.sprite(100, 245, 'bird');
+        //this.bird.scale.setTo(0.5, 0.5);
+        this.bird.width = 50;
+        this.bird.height = 40;
         
         // Move the anchor to the left and downward
         this.bird.anchor.setTo(-0.2, 0.5);
