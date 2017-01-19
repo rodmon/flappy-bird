@@ -10,7 +10,9 @@ var mainState = {
         // Load the bird sprite
         game.load.image('bird', 'assets/bird2.png');
         game.load.image('pipe', 'assets/pipe.png');
-        game.load.audio('jump', 'assets/jump.wav'); 
+        game.load.audio('jump', 'assets/jump.wav');
+        
+        game.input.onDown.add(this.jump, this);
     },
 
     // This function is called after the preload function     
